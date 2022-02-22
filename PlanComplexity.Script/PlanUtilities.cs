@@ -23,9 +23,15 @@ namespace Complexity.Script
             double fractionDose = 0.0;
             try
             {
+#if (DEBUG136)
                 fractionDose = plan.UniqueFractionation.PrescribedDosePerFraction.Dose;
+#endif
+#if (DEBUG)
+
+                fractionDose = plan.DosePerFraction.Dose;
+#endif
             }
-            catch(Exception)
+            catch (Exception)
             {
                 ;
             }

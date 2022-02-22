@@ -53,9 +53,17 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_13.6|AnyCPU'">
+    <OutputPath>bin\Debug_13.6\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_13.6|x64'">
+    <OutputPath>bin\x64\Debug_13.6\</OutputPath>
+    <DefineConstants>TRACE;DEBUG136</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MathNet.Numerics">
-      <HintPath>..\packages\MathNet.Numerics.4.12.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    <Reference Include="MathNet.Numerics, Version=4.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.4.15.0\lib\net461\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,12 +74,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="VMS.TPS.Common.Model.API">
-      <HintPath>C:\Program Files (x86)\Varian\Vision\13.5\Bin64\VMS.TPS.Common.Model.API.dll</HintPath>
-    </Reference>
-    <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>C:\Program Files (x86)\Varian\Vision\13.5\Bin64\VMS.TPS.Common.Model.Types.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algebra.cs" />
@@ -86,6 +88,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rect.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -94,4 +99,28 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Reference Include="VMS.TPS.Common.Model.API">
+      <HintPath>C:\Program Files (x86)\Varian\Vision\13.5\Bin64\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.Types">
+      <HintPath>C:\Program Files (x86)\Varian\Vision\13.5\Bin64\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Reference Include="VMS.TPS.Common.Model.API">
+      <HintPath>C:\Program Files (x86)\Varian\Vision\13.5\Bin64\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.Types">
+      <HintPath>C:\Program Files (x86)\Varian\Vision\13.5\Bin64\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_13.6|x64'">
+    <Reference Include="VMS.TPS.Common.Model.API">
+      <HintPath>..\\RefDll13.6\\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.Types">
+      <HintPath>..\\RefDll13.6\\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

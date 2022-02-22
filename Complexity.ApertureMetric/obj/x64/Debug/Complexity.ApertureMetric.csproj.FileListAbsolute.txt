@@ -36,3 +36,12 @@ D:\temp\PlanComplexity\Complexity.ApertureMetric\bin\x64\Debug\VMS.TPS.Common.Mo
 D:\temp\PlanComplexity\Complexity.ApertureMetric\bin\x64\Debug\VMS.TPS.Common.Model.Interface.pdb
 D:\temp\PlanComplexity\Complexity.ApertureMetric\obj\x64\Debug\Complexity.ApertureMetric.dll
 D:\temp\PlanComplexity\Complexity.ApertureMetric\obj\x64\Debug\Complexity.ApertureMetric.pdb
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\bin\x64\Debug\Complexity.ApertureMetric.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\bin\x64\Debug\Complexity.ApertureMetric.pdb
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\bin\x64\Debug\MathNet.Numerics.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\bin\x64\Debug\MathNet.Numerics.xml
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\obj\x64\Debug\Complexity.ApertureMetric.csproj.CoreCompileInputs.cache
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\obj\x64\Debug\Complexity.ApertureMetric.csproj.CopyComplete
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\obj\x64\Debug\Complexity.ApertureMetric.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\obj\x64\Debug\Complexity.ApertureMetric.pdb
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ApertureMetric\obj\x64\Debug\Complexity.ApertureMetric.csproj.AssemblyReference.cache

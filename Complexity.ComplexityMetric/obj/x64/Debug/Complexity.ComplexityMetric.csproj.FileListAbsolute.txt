@@ -49,3 +49,16 @@ D:\temp\PlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\VMS.TPS.Common.
 D:\temp\PlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.csprojResolveAssemblyReference.cache
 D:\temp\PlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.dll
 D:\temp\PlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.pdb
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\Complexity.ComplexityMetric.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\Complexity.ComplexityMetric.pdb
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\Complexity.ApertureMetric.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\MathNet.Numerics.Data.Text.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\MathNet.Numerics.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\Complexity.ApertureMetric.pdb
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\MathNet.Numerics.xml
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\bin\x64\Debug\MathNet.Numerics.Data.Text.xml
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.csproj.AssemblyReference.cache
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.csproj.CoreCompileInputs.cache
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.csproj.CopyComplete
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.dll
+E:\ESAPICodes\ReferenceCode\ESAPIPlanComplexity\Complexity.ComplexityMetric\obj\x64\Debug\Complexity.ComplexityMetric.pdb
