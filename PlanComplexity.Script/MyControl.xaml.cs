@@ -139,7 +139,7 @@ namespace PlanComplexity.Script
 #endif
 #if (!DEBUG136)
 
-                // Only choose DMLC/IMRT and VMAT plan to analysis
+                        // Only choose DMLC/IMRT and VMAT plan to analysis
                         var approvedPlans = from Course c in patient.Courses
                                             where c != null
                                             from PlanSetup ps in c.PlanSetups
@@ -229,11 +229,15 @@ namespace PlanComplexity.Script
                 return;
             }
             int totalPatient = dataLayer.PatientIdList.Count;
+
+            List<string> patientList = new List<string>();
             if (0 == totalPatient)
             {
                 theRunMessage.AddMessage("未指定患者ID，查找指定日期内的所有患者信息");
+
+                patientList = app.PatientSummaries.Where(x => x.CreationDateTime >= dataLayer.BeginTime && x.CreationDateTime <= dataLayer.EndTime).Select(x => x.Id).ToList();
             }
-            List<string> patientList = app.PatientSummaries.Where(x => x.CreationDateTime >= dataLayer.BeginTime && x.CreationDateTime <= dataLayer.EndTime).Select(x => x.Id).ToList();
+
 
             if (patientList.Count > 0)
             {
@@ -305,7 +309,7 @@ namespace PlanComplexity.Script
 #endif
 #if (!DEBUG136)
 
-                // Only choose DMLC/IMRT and VMAT plan to analysis
+                        // Only choose DMLC/IMRT and VMAT plan to analysis
                         var approvedPlans = from Course c in patient.Courses
                                             where c != null
                                             from PlanSetup ps in c.PlanSetups
