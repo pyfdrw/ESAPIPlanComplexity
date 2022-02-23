@@ -236,14 +236,18 @@ namespace PlanComplexity.Script
                 theRunMessage.AddMessage("未指定患者ID，查找指定日期内的所有患者信息");
 
                 patientList = app.PatientSummaries.Where(x => x.CreationDateTime >= dataLayer.BeginTime && x.CreationDateTime <= dataLayer.EndTime).Select(x => x.Id).ToList();
+
+                if (patientList.Count > 0)
+                {
+                    totalPatient = patientList.Count;
+                    theRunMessage.AddMessage($"按照指定日期查找所有患者数量为 {totalPatient}");
+                }
             }
-
-
-            if (patientList.Count > 0)
+            else
             {
-                totalPatient = patientList.Count;
-                theRunMessage.AddMessage($"所有患者数量为 {totalPatient}");
+                theRunMessage.AddMessage($"给定列表所有患者数量为 {totalPatient}");
             }
+
 
             theRunMessage.AddMessage($"输出文件夹: {dataLayer.OutputFolder}");
 
