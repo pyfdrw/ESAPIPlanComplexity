@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
@@ -37,10 +37,11 @@ namespace GetPlanComplexity
         }
         static void Execute(Application app, string[] args)
         {
-            if (2 == args.Length)
+            if (3 == args.Length)
             {
                 string patientId = args[0].Trim();
-                string outputJsonPath = args[1].Trim();  // Store results in this file
+                string planId = args[1].Trim(); // 如果是空字符串""，则默认所有都检查
+                string outputJsonPath = args[2].Trim();  // Store results in this file
 
                 Patient patient = app.OpenPatientById(patientId);
                 if (patient == null)
@@ -56,17 +57,42 @@ namespace GetPlanComplexity
                     {
                         foreach (PlanSetup plan in course.PlanSetups)
                         {
-                            if (plan.PlanIntent.ToUpper().Contains("VERIFICATION"))
+                            if (string.IsNullOrEmpty(planId))
                             {
-                                // Skip
-                                Console.WriteLine($"Skipped Verification Plan: {plan.Id} in Course: {course.Id}");
-                                continue;
+                                if (plan.PlanIntent.ToUpper().Contains("VERIFICATION"))
+                                {
+                                    // Skip
+                                    Console.WriteLine($"Skipped Verification Plan: {plan.Id} in Course: {course.Id}");
+                                    continue;
+                                }
+                                else
+                                {
+                                    PlanComplexityValues pcv = new PlanComplexityValues(plan);
+                                    planComplexityValuesList.Add(pcv);
+                                    Console.WriteLine($"Processed Plan: {plan.Id} in Course: {course.Id}");
+                                }
                             }
                             else
                             {
-                                PlanComplexityValues pcv = new PlanComplexityValues(plan);
-                                planComplexityValuesList.Add(pcv);
-                                Console.WriteLine($"Processed Plan: {plan.Id} in Course: {course.Id}");
+                                if (plan.Id.ToUpper().Trim().Contains(planId.Trim().ToUpper()))
+                                {
+                                    if (plan.PlanIntent.ToUpper().Contains("VERIFICATION"))
+                                    {
+                                        // Skip
+                                        Console.WriteLine($"Skipped Verification Plan: {plan.Id} in Course: {course.Id}");
+                                        continue;
+                                    }
+                                    else
+                                    {
+                                        PlanComplexityValues pcv = new PlanComplexityValues(plan);
+                                        planComplexityValuesList.Add(pcv);
+                                        Console.WriteLine($"Processed Plan: {plan.Id} in Course: {course.Id}");
+                                    }
+                                }
+                                else
+                                {
+                                    continue;
+                                }
                             }
                         }
                     }

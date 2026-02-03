@@ -402,3 +402,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+*.pdb
+obj\x64\Debug
+obj\x64\Release
