@@ -56,15 +56,17 @@ namespace GetPlanComplexity
                     {
                         foreach (PlanSetup plan in course.PlanSetups)
                         {
-                            if (plan.PlanIntent.ToUpper().Contains("VARIFICATION"))
+                            if (plan.PlanIntent.ToUpper().Contains("VERIFICATION"))
                             {
                                 // Skip
+                                Console.WriteLine($"Skipped Verification Plan: {plan.Id} in Course: {course.Id}");
                                 continue;
                             }
                             else
                             {
                                 PlanComplexityValues pcv = new PlanComplexityValues(plan);
                                 planComplexityValuesList.Add(pcv);
+                                Console.WriteLine($"Processed Plan: {plan.Id} in Course: {course.Id}");
                             }
                         }
                     }
