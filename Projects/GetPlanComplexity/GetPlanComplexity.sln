@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetPlanComplexity", "GetPlanComplexity.csproj", "{532CA0E9-050E-4312-B5E8-70968144F091}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Debug|x64.ActiveCfg = Debug|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Debug|x64.Build.0 = Debug|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Release|x64.ActiveCfg = Release|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7EE42C4-6D63-4431-8D1D-265A260B0E4D}
+	EndGlobalSection
+EndGlobal

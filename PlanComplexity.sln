@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Complexity.ApertureMetric",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Complexity.ComplexityMetric", "Complexity.ComplexityMetric\Complexity.ComplexityMetric.csproj", "{8CD5E848-A6E7-46A3-9710-CC2EA7C28518}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetPlanComplexity", "Projects\GetPlanComplexity\GetPlanComplexity.csproj", "{532CA0E9-050E-4312-B5E8-70968144F091}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8CD5E848-A6E7-46A3-9710-CC2EA7C28518} = {8CD5E848-A6E7-46A3-9710-CC2EA7C28518}
+		{D2D9F164-DB77-4F62-B2CC-C7F410A6BCCB} = {D2D9F164-DB77-4F62-B2CC-C7F410A6BCCB}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_13.6|Any CPU = Debug_13.6|Any CPU
@@ -34,6 +40,12 @@ Global
 		{8CD5E848-A6E7-46A3-9710-CC2EA7C28518}.Debug|Any CPU.Build.0 = Debug|x64
 		{8CD5E848-A6E7-46A3-9710-CC2EA7C28518}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CD5E848-A6E7-46A3-9710-CC2EA7C28518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Debug_13.6|Any CPU.ActiveCfg = Debug|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Debug_13.6|Any CPU.Build.0 = Debug|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Debug|Any CPU.Build.0 = Debug|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Release|Any CPU.ActiveCfg = Release|x64
+		{532CA0E9-050E-4312-B5E8-70968144F091}.Release|Any CPU.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
