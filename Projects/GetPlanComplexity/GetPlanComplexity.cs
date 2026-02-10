@@ -37,11 +37,12 @@ namespace GetPlanComplexity
         }
         static void Execute(Application app, string[] args)
         {
-            if (3 == args.Length)
+            if (4 == args.Length)
             {
                 string patientId = args[0].Trim();
-                string planId = args[1].Trim(); // 如果是空字符串""，则默认所有都检查
-                string outputJsonPath = args[2].Trim();  // Store results in this file
+                string courseId = args[1].Trim();// 如果是空字符串""，则默认所有都检查
+                string planId = args[2].Trim(); // 如果是空字符串""，则默认所有都检查
+                string outputJsonPath = args[3].Trim();  // Store results in this file
 
                 Patient patient = app.OpenPatientById(patientId);
                 if (patient == null)
@@ -55,9 +56,14 @@ namespace GetPlanComplexity
                     // Skip validation plan
                     foreach (Course course in patient.Courses)
                     {
+                        if(!string.IsNullOrWhiteSpace(courseId) && !course.Id.Trim().ToUpper().Contains(courseId.Trim().ToUpper()))
+                        {
+                            Console.Write($"Skip course {course.Id}");
+                            continue;
+                        }
                         foreach (PlanSetup plan in course.PlanSetups)
                         {
-                            if (string.IsNullOrEmpty(planId))
+                            if (string.IsNullOrWhiteSpace(planId))
                             {
                                 if (plan.PlanIntent.ToUpper().Contains("VERIFICATION"))
                                 {
