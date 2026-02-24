@@ -13,6 +13,9 @@ namespace GetPlanComplexity
         // Plan Infos
         public string PlanId { get; set; }
         public string courseIdorsiteName { get; set; } // Course Id
+        
+        public string flh { get; set; }
+
         public string AlgorithmName { get; set; } // AAA, AcurosXB
         public string PlanTechnicalName { get; set; } // VMAT or IMRT
 
@@ -64,6 +67,7 @@ namespace GetPlanComplexity
         {
             PlanId = ps.Id;
             courseIdorsiteName = ps.Course.Id;
+            flh = ps.Course.Patient.Id;
             AlgorithmName = ps.PhotonCalculationModel;
             FractionDose = ps.DosePerFraction.Dose;
             TotalDose = ps.TotalDose.Dose;
