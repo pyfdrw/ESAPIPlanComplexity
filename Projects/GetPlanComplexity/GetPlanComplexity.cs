@@ -80,7 +80,7 @@ namespace GetPlanComplexity
                             }
                             else
                             {
-                                if (plan.Id.ToUpper().Trim().Contains(planId.Trim().ToUpper()))
+                                if (plan.Id.ToUpper().Trim().Equals(planId.Trim().ToUpper()))
                                 {
                                     if (plan.PlanIntent.ToUpper().Contains("VERIFICATION"))
                                     {
