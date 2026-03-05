@@ -44,7 +44,15 @@ namespace GetPlanComplexity
                 string planId = args[2].Trim(); // 如果是空字符串""，则默认所有都检查
                 string outputJsonPath = args[3].Trim();  // Store results in this file
 
-                Patient patient = app.OpenPatientById(patientId);
+                Patient patient = app.OpenPatientById(patientId.Trim());
+                if (patient == null)
+                {
+                    patient = app.OpenPatientById(patientId.ToLower().Trim());
+                }
+                if (patient == null)
+                {
+                    patient = app.OpenPatientById(patientId.ToUpper().Trim());
+                }
                 if (patient == null)
                 {
                     Console.Error.WriteLine("Patient not found: " + patientId);
